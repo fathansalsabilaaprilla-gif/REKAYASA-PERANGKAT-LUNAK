@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Akademik - Input Nilai</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">Portal Akademik</div>
+    <div class="nav-right">
+<a href="index.html" class="active">Input Nilai</a>
+    <a href="lihat-data.html">Lihat Data Mahasiswa</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="form-card">
+      <h2>Formulir Input Nilai</h2>
+      <hr>
+
+      <form id="nilaiForm">
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+
+        <label>NIM (Nomor Induk Mahasiswa)</label>
+        <input type="text" id="nim" placeholder="Contoh: 10119001" required>
+
+        <label>Mata Kuliah</label>
+        <select id="matkul" required>
+          <option value="">Pilih mata kuliah...</option>
+          <option value="Pemrograman Web">Pemrograman Web</option>
+          <option value="Basis Data">Basis Data</option>
+          <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+          <option value="Sistem Operasi">Sistem Operasi</option>
+        </select>
+
+        <label>Nilai Mahasiswa</label>
+        <input type="number" id="nilai" step="0.1" placeholder="85.5" required>
+
+        <button type="submit">Simpan Data</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/dataService.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/uiHandler.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
