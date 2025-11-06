@@ -164,3 +164,44 @@ td button:hover {
   color: #0d6efd;
   font-weight: bold;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Kolom No lebih sempit */
+th:first-child,
+td:first-child {
+  width: 60px;
+}
+
+td button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+td button:hover {
+  background-color: #c82333;
+}
+
+.nav-right a.active {
+  color: #0d6efd;
+  font-weight: bold;
+}
